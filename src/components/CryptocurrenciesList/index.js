@@ -4,7 +4,6 @@ import './index.css'
 const CryptocurrenciesList = ({cryptocurrenciesData}) => {
   return (
     <div className="cryptocurrencies-list-container">
-      <h1 className="heading">Cryptocurrency Tracker</h1>
       <div className="table-container">
         <div className="table-header">
           <p className="header-text">Coin Type</p>

@@ -41,20 +41,19 @@ class CryptocurrencyTracker extends Component {
   render() {
     const {cryptocurrenciesData, isLoading} = this.state
 
-    return (
+    return isLoading ? (
+      <div data-testid="loader" className="loader-container">
+        <Loader type="Rings" color="#ffffff" height={80} width={80} />
+      </div>
+    ) : (
       <div className="app-container">
+        <h1 className="heading">Cryptocurrency Tracker</h1>
         <img
           src="https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png"
           alt="cryptocurrency"
           className="background-img"
         />
-        {isLoading ? (
-          <div data-testid="loader" className="loader-container">
-            <Loader type="Rings" color="#ffffff" height={80} width={80} />
-          </div>
-        ) : (
-          <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
-        )}
+        <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
       </div>
     )
   }
