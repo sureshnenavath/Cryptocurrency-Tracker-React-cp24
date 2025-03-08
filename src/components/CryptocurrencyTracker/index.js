@@ -20,7 +20,6 @@ class CryptocurrencyTracker extends Component {
       )
       const data = await response.json()
 
-      // Transform snake_case to camelCase
       const formattedData = data.map(crypto => ({
         id: crypto.id,
         currencyName: crypto.currency_name,

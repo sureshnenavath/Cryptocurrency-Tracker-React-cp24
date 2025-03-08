@@ -13,7 +13,7 @@
 .table-container {
   border: 1px solid #00e7ff;
   border-radius: 8px;
-  background-color: #092e33;
+  background-color: transparent;
 }
 
 .table-header {
